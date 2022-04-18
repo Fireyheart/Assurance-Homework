@@ -1,0 +1,19 @@
+.imageList {
+    width: 95vw;
+    align-self: center;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText {
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 75vw;
+    text-align: center;
+}

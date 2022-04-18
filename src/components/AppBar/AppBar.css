@@ -1,0 +1,25 @@
+.logoHeader {
+    display: flex;
+}
+.navigationButtonContainer {
+    flex-grow: 1;
+    display: flex;
+}
+.userButtonContainer {
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.button {
+    color: white !important;
+    display: flex;
+}
+.uploadButton {
+    justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+}
+
+.uploadIcon {
+    padding-right: 5px;
+}

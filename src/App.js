@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import CustomAppBar from './components/AppBar/AppBar';
+import ImageList from '@mui/material/ImageList';
+import * as React from 'react';
+import { homePageData } from './constants/HomePageData';
+import ImageListItem from '@mui/material/ImageListItem';
+import { SearchCard } from './components/SearchCard/SearchCard';
+const App = () => {
+    return (
+        <div className="page">
+            <CustomAppBar />
+            <SearchCard />
+            <ImageList className="imageList" cols={5}>
+                {homePageData.map((item) => (
+                    <ImageListItem key={item.id}>
+                        <img
+                            src={`${item.webformatURL}?w=164&h=164&fit=crop&auto=format`}
+                            alt={item.title}
+                            loading="lazy"
+                        />
+                    </ImageListItem>
+                ))}
+            </ImageList>
+        </div>
+    );
+};
 
 export default App;
